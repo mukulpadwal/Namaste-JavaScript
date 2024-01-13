@@ -1,26 +1,27 @@
 const marvelHeros = ['thor', 'ironmain', 'spiderman'];
 const dcHeros = ['superman', 'flash', 'batman' ];
 
-// marvelHeros.push(dcHeros);
 
-// console.log(marvelHeros); // [ 'thor', 'ironmain', 'spiderman', [ 'superman', 'flash', 'batman' ] ]
-// console.log(marvelHeros[3][0]);
+// 1) .push(array) : Pushes entire array makes changes in original array
 
-// 1) .concat() : returns a new array
+marvelHeros.push(dcHeros);
+console.log(marvelHeros); // [ 'thor', 'ironmain', 'spiderman', [ 'superman', 'flash', 'batman' ] ]
+console.log(marvelHeros[3][0]);
 
-// const concatHeros = marvelHeros.concat(dcHeros);
-// console.log(concatHeros);
+// 2) .concat() : returns a new array
+
+const concatHeros = marvelHeros.concat(dcHeros);
+console.log(concatHeros);
 
 
-// Spread Operater : kaanch ka glass drop karo spread ho jaega
+// 3) Spread Operater : kaanch ka glass drop karo spread ho jaega
 
 const allNewHeros = [...marvelHeros, ...dcHeros];
 console.log(allNewHeros);
 
-// Nested arrays
+// 4) .flat(depth)-> Infinity
 const anotherArr = [1,2,3, [4,5,6], 7, [6, 7, [8,9,9]]];
 
-// .flat(depth)-> Infinity
 const realAnotherArray = anotherArr.flat(Infinity);
 console.log(realAnotherArray);
 
