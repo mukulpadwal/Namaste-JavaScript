@@ -111,8 +111,24 @@ const user = {
     price: 1000
 }
 
-function handleObject(user) {
-    
+function handleObject(anyObject) {
+    console.log(`${anyObject.username} ${anyObject.price}`)
 }
 
+handleObject(user);
+handleObject({
+    username: 'l',
+    price: 9090
+});
+
+
+// Passing Arrays in function
+
+const myArray = [1, 2, 3, 4];
+
+function handleArray(anyArray) {
+    console.log(anyArray[1]);
+}
+
+handleArray(myArray);
 
