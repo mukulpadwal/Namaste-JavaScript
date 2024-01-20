@@ -91,6 +91,7 @@ function calculateCartPrice(...num1) {
 console.log(calculateCartPrice(200, 300, 400)); // [ 200, 300, 400 ]
 
 // To solve this problem we have a rest operator ...
+// ... is called spread and rest operator both but the difference is where we are using it
 
 
 function calculateCartPrice1(val1, val2, ...num1) {
