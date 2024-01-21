@@ -17,7 +17,6 @@ const user = {
 // user.welcomeMessage(); // Mukul , welcome to my Website
 
 // user.username = "Akaisha"
-
 // user.welcomeMessage() // Akaisha , welcome to my Website
 
 // NOTE --------------------
@@ -43,7 +42,7 @@ function chai() {
 const cuttingChai1 = function () {
     let username= "mukul";
     console.log(this); // Here we will get an object containing reference to an object
-    console.log(this.username); // undefined
+    console.log(this.username); // undefined : can't access like we do in objects
 }
 
 // cuttingChai1()
@@ -68,22 +67,22 @@ const addTwo = (num1, num2) => {
     return num1 + num2;
 }
 
-console.log(addTwo);
-console.log(addTwo());
-console.log(addTwo(null,1));
-console.log(addTwo(null,null));
-console.log(addTwo(undefined,null));
-console.log(addTwo(8,7));
+// console.log(addTwo); // 
+// console.log(addTwo()); // NaN
+// console.log(addTwo(null,1)); // 1
+// console.log(addTwo(null,null)); // 0
+// console.log(addTwo(undefined,null)); // NaN
+// console.log(addTwo(8,7)); // 15
 
 
-// Implicit return
+// Implicit return : we need not to write the return keyword
 const addTwoNum = (num1, num2) => num1 + num2;
 
 // () = return likhne ki zaroorat nhi
 // {} = return likhna hai
 const addTwoNumR = (num1, num2) => (num1 + num2);
 
-// return object
+// Returning object
 // const returnObject = () => {username: "mukul"} // cannot return object like this
 const returnObject = () => ({username: "mukul"})
 
