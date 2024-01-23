@@ -26,20 +26,20 @@ switch (month) {
         break;
     case 6: console.log('June');
         break;
-    case 7: console.log('January');
+    case 7: console.log('July');
         break;
-    case 8: console.log('January');
+    case 8: console.log('August');
         break;
-    case 9: console.log('January');
+    case 9: console.log('September');
         break;
-    case 10: console.log('January');
+    case 10: console.log('October');
         break;
-    case 11: console.log('January');
+    case 11: console.log('November');
         break;
-    case 12: console.log('January');
+    case 12: console.log('December');
         break;
     default: console.log(`Sorry Not Month Found`);
         break;
 }
 
-// if we do not use break then the point where the case is matched it prints all the case values but not default
+// NOTE : If we do not use break then after matching the condition it will execute all the cases below except the default one unless it finds a break
