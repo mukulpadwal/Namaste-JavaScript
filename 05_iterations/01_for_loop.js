@@ -2,15 +2,15 @@
 // There are many loops in javascript 
 
 // 1. For Loop
-/*
-SYNTAX : 
-    for (initialization; condition; incremnet/decrement) {
-        // Code Logic
-    }
-*/
+    /*
+    SYNTAX : 
+        for (initialization; condition; incremnet/decrement) {
+            // Code Logic
+        }
+    */
+
 
 // Let's print number from 0 to 10
-
 for (let i = 0; i <= 10; i++) {
     const element = i;
     if(element == 5){
@@ -21,7 +21,6 @@ for (let i = 0; i <= 10; i++) {
 
 
 // Nested Loops
-
 for (let i = 1; i <= 10; i++) {
     for (let j = 1; j <= 10; j++) {
         // console.log(`Inner Loop ${j} and Inner Loop ${i}`);
@@ -66,4 +65,4 @@ for (let index = 1; index <= 20; index++) {
 }
 
 
-// NOTE : unlike other languages javascript does not through any error if we try to loop mor than the length of array it returns undefined instead (Which is not a good thing so we should check our conditions carefully.)
+// NOTE : unlike other languages javascript does not through any error if we try to loop more than the length of array it returns undefined instead (Which is not a good thing so we should check our conditions carefully.)
