@@ -35,6 +35,7 @@ if(Object.keys(emptyObj).length === 0){
 console.log(false == 0); // true
 console.log(false == ''); // true
 console.log(0 == ''); // true
+console.log(NaN == NaN); // false
 
 
 // Nullish Coalescing Operator (??) : null undefined
