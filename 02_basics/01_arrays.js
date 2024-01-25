@@ -73,7 +73,7 @@ console.log(`Condition after using .slice() [${originalArray}]`);
 console.log(`Condition before using .splice() [${originalArray}]`);
 
 const mySplicedArray = originalArray.splice(1, 3) // it include the last
-console.log(`mySlicedArray .slice() [${mySplicedArray}]`);
+console.log(`mySplicedArray .splice() [${mySplicedArray}]`);
 console.log(`Condition after using .splice() [${originalArray}]`);
 
 
