@@ -1,4 +1,4 @@
-// for of
+// for...of loop
 
 // ["", "", ""]
 // [{}, {}, {}]
@@ -10,6 +10,7 @@ SYNTAX:
     }
 */
 
+// Let's iterate through the array of numbers
 const arr = [1,2,3,4,5];
 
 for (const num of arr) {
@@ -24,7 +25,7 @@ for (const greet of greetings) {
 }
 
 
-// Data type
+// Data type Time
 // Maps : object holds key-value pair. Remembers original order.
 // No duplicate values in maps.
 
