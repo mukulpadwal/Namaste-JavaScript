@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model | Remove and Edit Elements</title>
+</head>
+<style>
+    body {
+        background-color: #212121;
+        color: white;
+    }
+</style>
+<body>
+    <ul class="lang">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    // Drawback : traversed the entire tree
+    function addListItem(langName){
+        const li = document.createElement('li');
+        li.innerHTML = `${langName}`;
+        document.querySelector('.lang').appendChild(li);
+    }
+
+    addListItem('ReactJs');
+    addListItem('NextJs');
+
+    // Optimized Way to do the same thing
+    function addListItemOptimized(langName){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langName));
+        document.querySelector('.lang').appendChild(li);
+    }
+
+    addListItemOptimized('nodeJs');
+    addListItemOptimized('nustJs');
+
+
+    // Editing Values
+    const secLi = document.querySelector('li:nth-child(2)');
+    console.log(secLi);
+    // secLi.innerText = "Mojo";
+    const newLi = document.createElement('li');
+    newLi.textContent = "Mojo";
+
+    secLi.replaceWith(newLi);
+
+    const firstLi = document.querySelector('li:first-child');
+    firstLi.outerHTML = '<li>TypeScript</li>';
+
+
+    // Remove
+    const lastLi = document.querySelector('li:last-child');
+    lastLi.remove();
+</script>
+</html>
