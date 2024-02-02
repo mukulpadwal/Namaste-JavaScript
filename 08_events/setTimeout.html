@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setTimeout()</title>
+    <style>
+        body {
+            background-color: #1f1f1f;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>setTimeout() in javascript</h1>
+    <button id="stop">STOP</button>
+</body>
+<script>
+    const sayMyName = function () {
+        console.log('Mukul')
+    }
+
+    const changeH1Text = function () {
+        document.querySelector('h1').innerHTML = "MUKUL PADWAL";
+    }
+
+
+    // setTimeout() : only runs once
+    const changeMe = setTimeout(sayMyName, 2000);
+    setTimeout(changeH1Text, 2000);
+
+    // clearTimeOut(reference)
+    document.querySelector('#stop').addEventListener('click', function () {
+        clearTimeout(changeMe);
+        console.log('Stopped');
+    }, false);
+
+    // setInterval() : runs continuosly after specified time interval
+</script>
+
+</html>
