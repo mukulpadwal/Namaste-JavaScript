@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #212121;
+            color: white;
+        }
+
+        table,
+        tr,
+        th,
+        td {
+            border: 1px solid white;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Value</th>
+                <th>State</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>0</code></td>
+                <td><code>UNSENT</code></td>
+                <td>Client has been created. <code>open()</code> not called yet.</td>
+            </tr>
+            <tr>
+                <td><code>1</code></td>
+                <td><code>OPENED</code></td>
+                <td><code>open()</code> has been called.</td>
+            </tr>
+            <tr>
+                <td><code>2</code></td>
+                <td><code>HEADERS_RECEIVED</code></td>
+                <td><code>send()</code> has been called, and headers and status are available.</td>
+            </tr>
+            <tr>
+                <td><code>3</code></td>
+                <td><code>LOADING</code></td>
+                <td>Downloading; <code>responseText</code> holds partial data.</td>
+            </tr>
+            <tr>
+                <td><code>4</code></td>
+                <td><code>DONE</code></td>
+                <td>The operation is complete.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr />
+
+    <div id="container">
+        <div class="card"></div>
+        <button id="dataBtn">FETCH DATA</button>
+    </div>
+</body>
+<script>
+    const requestUrl = 'https://api.github.com/users/mukulpadwal';
+    const button = document.getElementById('dataBtn');
+    const card = document.querySelector('.card');
+    let imageElement = document.createElement('img');
+    let p = document.createElement('p');
+    
+    button.addEventListener('click', function (e) {
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', requestUrl);
+        xhr.onreadystatechange = function () {
+            console.log(xhr.readyState);
+            if (xhr.readyState === 4) {
+                // IMPORTANT NOTE
+                // IN MOST OF THE CASES THE RESPONSE WE GET IS IN STRING FORMAT
+                // const data = this.responseText;
+                // console.log(typeof data); // string
+                // console.log(data.followers); // undefined
+
+
+                // TO RESOLVE THE UNDEFINED ISSUE
+                // WE NEED TO CONVERT THAT STRING TYPE TO JSON
+
+                const jsonData = JSON.parse(this.responseText);
+                // console.log(typeof jsonData);
+                if(jsonData) {
+                    imageElement.setAttribute('src', jsonData.avatar_url)
+                    imageElement.style.height = '100px';
+                    imageElement.style.width = '100px';
+                    p.innerHTML = `<span>${jsonData.followers}</span>`;
+                    card.appendChild(imageElement);
+                    card.appendChild(p);
+                    button.setAttribute('disabled', '');
+                }
+            }
+        }
+        xhr.send()
+    }, false);
+</script>
+
+</html>
