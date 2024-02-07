@@ -8,7 +8,7 @@ myNameCopy = 'MP'
 console.log(myName);
 console.log(myNameCopy);
 
-// In a nutshell the copy of the value is passed to the other variable keepin the original one as ot is
+// In a nutshell the copy of the value is passed to the other variable keeping the original one as it is
 
 let userOne = {
     name : 'xyz',
