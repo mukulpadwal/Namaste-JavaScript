@@ -6,6 +6,7 @@
 
 # OOP : object oriented language
 - programming paradigme
+    - it is nothing but a style to write the code
 
 ## Object 
 - collection of properties and methods
@@ -14,7 +15,7 @@
 ## why use OOP
 - better structure of code
 
-### parts od OOP
+### parts of OOP
 - Object literal `{}`
     - constructor function
     - prototypes
@@ -24,6 +25,6 @@
 
 ### 4 pillars
 - Abstraction : hiding details (fetch())
-- Encapsulation : wrapup data inside class
+- Encapsulation : wrapping up data inside class
 - Inheritance : 
 - Polymorphism : one thing many forms
