@@ -15,6 +15,6 @@ ReferenceError: Cannot access 'age' before initialization
 */
 
 /* 
-CONCEPT : Temporal Dead Zone
+CONCEPT : Temporal Dead Zone (hoisting works different in case of let and const)
 -> A temporal dead zone (TDZ) is the area of a block where a variable is inaccessible until the moment the computer completely initializes it with a value.
 */
