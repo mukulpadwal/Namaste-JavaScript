@@ -6,7 +6,14 @@
     <title>Lexical Scoping</title>
   </head>
 
-  <body style="background-color: #313131"></body>
+  <body style="background-color: #313131">
+    <p>
+      A closure is the combination of a function bundled together (enclosed)
+      with refrences to its surrounding state (the lexical environment). In
+      other words, a closure gives you access to an outer function's scope from
+      an inner function.
+    </p>
+  </body>
   <script>
     // function init() {
     //     let name = "Mozilla";
@@ -19,14 +26,14 @@
 
     function outer() {
       let username = "mukul";
-    //   console.log(secret);
+      //   console.log(secret);
       function inner() {
         let secret = "in123";
         console.log("INNER", username);
       }
       function innerTwo() {
-          console.log("INNERTWO", username);
-          console.log("INNERTWO", secret);
+        console.log("INNERTWO", username);
+        console.log("INNERTWO", secret);
       }
       inner();
       innerTwo();
